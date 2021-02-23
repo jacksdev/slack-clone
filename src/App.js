@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header.js'
+import Header from './components/Header.js'
 
 import './App.css';
 import {
@@ -13,14 +13,14 @@ function App() {
     <div className="app">
       
       <Router>
-      <>
-        <Switch>
-          <Route path="/" exact>
-            <Header />
-          </Route>
-        </Switch>
-      </>
-    </Router>
+        <>
+          <Switch>
+            <Route path="/" exact>
+              <Header />
+            </Route>
+          </Switch>
+        </>
+      </Router>
 
     </div>
   );
