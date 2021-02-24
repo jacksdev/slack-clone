@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './components/Header.js'
-import SideBar from './components/SideBar'
+import Header from './components/Header.js';
+import SideBar from './components/SideBar';
 import styled from 'styled-components';
 
 import './App.css';
@@ -22,7 +22,7 @@ function App() {
             <SideBar />
             <Switch>
               <Route path="/" exact>
-                //TODO Chat components
+                {/* //TODO Chat components */}
               </Route>
             </Switch>
           </AppBody>
@@ -39,6 +39,7 @@ export default App;
 
 
 const AppBody = styled.div`
-
+  display: flex;
+  height: 100vh;
 
 `
