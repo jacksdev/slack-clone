@@ -2,24 +2,29 @@ import React from 'react';
 import styled from 'styled-components';
 import { Avatar } from '@material-ui/core'
 import AccessTimeIcon from '@material-ui/icons/AccessTime'
+import SearchIcon from '@material-ui/icons/Search'
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline'
 
 export default function Header() {
     return (
         <HeaderContainer>
+
             <HeadLeft>
                 <HeadAvatar
                     // TODO write onCLick
                 />
-
                 <AccessTimeIcon />
-
             </HeadLeft>
-            <HeadCenter>
 
-            </HeadCenter>
-            <HeadRight>
+            <HeaderSearch>
+                <SearchIcon /> 
+                <input placeholder="Search codeTeam" />
+            </HeaderSearch>
 
-            </HeadRight>
+            <HeaderRight>
+                <HelpOutlineIcon />
+            </HeaderRight>
+         
         </HeaderContainer>
     )
 }
@@ -34,8 +39,7 @@ const HeaderContainer = styled.div`
         padding: 10px 0;
         background-color: var(--slack-color);
         color: white;
-        
-        border: 1px solid black;
+        border: 1px solid white;
     `           
 
 const HeadLeft = styled.div` 
@@ -46,24 +50,49 @@ const HeadLeft = styled.div`
 
         > .MuiSvgIcon-root {
             margin-left: auto;
-            margin-right: 30px
+            margin-right: 20px;
         }
 
+ `
 
-        border: 1px solid black;
-        
-    `
+const HeaderSearch = styled.div`
+    flex: 0.4;
+    opacity: 1;
+    border-radius: 6px;
+    background-color: #421f44;
+    text-align: center;
+    display: flex;
+    padding: 0 50px;
+    color: gray;
+    border: 1px solid grey;
 
+    > input {
+        background-color: transparent;
+        border: none;
+        text-align: center;
+        min-width: 30vw;
+        outline: 0;
+        color: white;
+    }
 
-const HeadCenter = styled.div` 
-    `
+`
 
-const HeadRight = styled.div`
-    `
+const HeaderRight = styled.div`
+    flex: 0.3;
+    display: flex;
+    align-items: flex-end;
+    
+    > .MuiSvgIcon-root {
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+`
+
 
 const HeadAvatar = styled(Avatar)`
     cursor: pointer;
     :hover{
-        opacity: 0.3;
+        opacity: 0.8;
     }
 `
