@@ -7,7 +7,11 @@ export default function Header() {
     return (
         <HeaderContainer>
             <HeadLeft>
-                <HeadAvatar />
+                <HeadAvatar
+                    // TODO write onCLick
+                />
+
+                <AccessTimeIcon />
 
             </HeadLeft>
             <HeadCenter>
@@ -22,22 +26,44 @@ export default function Header() {
 
 
 const HeaderContainer = styled.div`
-        color: red;
+        display: flex;
+        position: fixed;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        background-color: var(--slack-color);
+        color: white;
+        
+        border: 1px solid black;
+    `           
+
+const HeadLeft = styled.div` 
+        flex: 0.3;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+
+        > .MuiSvgIcon-root {
+            margin-left: auto;
+            margin-right: 30px
+        }
+
+
+        border: 1px solid black;
+        
     `
 
-const HeadLeft = styled.div`
-    color: red;
-`
 
-
-const HeadCenter = styled.div`
-    color: red;
-`
+const HeadCenter = styled.div` 
+    `
 
 const HeadRight = styled.div`
-    color: red; 
-`
+    `
 
 const HeadAvatar = styled(Avatar)`
-    color: red;
+    cursor: pointer;
+    :hover{
+        opacity: 0.3;
+    }
 `
