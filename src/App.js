@@ -1,5 +1,7 @@
 import React from 'react';
 import Header from './components/Header.js'
+import SideBar from './components/SideBar'
+import styled from 'styled-components';
 
 import './App.css';
 import {
@@ -8,17 +10,23 @@ import {
   Route,
 } from "react-router-dom";
 
+
 function App() {
   return (
     <div className="app">
       
       <Router>
         <>
-          <Switch>
-            <Route path="/" exact>
-              <Header />
-            </Route>
-          </Switch>
+          <Header />
+          <AppBody>
+            <SideBar />
+            <Switch>
+              <Route path="/" exact>
+                //TODO Chat components
+              </Route>
+            </Switch>
+          </AppBody>
+          
         </>
       </Router>
 
@@ -27,3 +35,10 @@ function App() {
 }
 
 export default App;
+
+
+
+const AppBody = styled.div`
+
+
+`
