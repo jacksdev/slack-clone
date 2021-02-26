@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import React from 'react';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import CreateIcon from '@material-ui/icons/Create';
+
 
 function SideBar() {
     return (
@@ -13,6 +15,7 @@ function SideBar() {
                         Jack Frolov
                     </h3>
                 </SidebarInfo>
+                <CreateIcon />
             </SidebarHeader>
         </SidebarContainer>
     )
@@ -30,7 +33,17 @@ const SidebarContainer = styled.div`
 `
 
 const SidebarHeader = styled.div`
-    
+    display: flex;
+    border-bottom: 1px solid #49274b;
+    padding: 12px;
+
+    > .MuiSvgIcon-root {
+        padding: 8px;
+        color: #49274b;
+        font-size: 18px;
+        background-color: white;
+        border-radius: 999px;
+    }
 `
 
 const SidebarInfo = styled.div`
