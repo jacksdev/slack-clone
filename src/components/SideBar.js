@@ -1,7 +1,9 @@
-import styled from 'styled-components';
 import React from 'react';
+import styled from 'styled-components';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import CreateIcon from '@material-ui/icons/Create';
+
+import SidebarOption from './SidebarOption'
 
 
 function SideBar() {
@@ -16,12 +18,18 @@ function SideBar() {
                     </h3>
                 </SidebarInfo>
                 <CreateIcon />
+
+                <SidebarOption />
             </SidebarHeader>
+
+            <SidebarOption />
         </SidebarContainer>
     )
 }
 
 export default SideBar;
+
+
 
 const SidebarContainer = styled.div`
     flex: 0.3;
@@ -47,5 +55,26 @@ const SidebarHeader = styled.div`
 `
 
 const SidebarInfo = styled.div`
+    flex: 1;
+    
+    > h2 {
+        font-size: 15px;
+        font-weight: 900;
+        margin-bottom: 5px;
+    }
+
+    > h3 {
+        display: flex;
+        font-size:13px;
+        font-weight:400;
+        align-items:center;
+    }
+
+    > h3 > .MuiSvgIcon-root {
+        font-size: 14px;
+        margin-top: 1px;
+        margin-right: 2px;
+        color: green;
+    }
 
 `

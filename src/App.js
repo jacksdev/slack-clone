@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './components/Header.js';
+import Header from './components/Header';
 import SideBar from './components/SideBar';
 import styled from 'styled-components';
 
