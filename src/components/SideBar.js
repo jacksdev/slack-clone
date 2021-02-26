@@ -12,7 +12,7 @@ import PeaopleAltIcon from '@material-ui/icons/PeopleAlt'
 import AppsIcon from '@material-ui/icons/Apps'
 import ExpandLessIcon from '@material-ui/icons/ExpandLess'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-
+import AddIcon from '@material-ui/icons/Add'
 
 import SidebarOption from './SidebarOption'
 
@@ -40,7 +40,15 @@ function SideBar() {
             <SidebarOption Icon={AppsIcon} title="Apps" />
             <SidebarOption Icon={FileCopyIcon} title="File browser" />
             <SidebarOption Icon={ExpandLessIcon} title="Show less" />
-            
+
+            <hr />
+
+            <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
+
+            <hr />
+
+            <SidebarOption Icon={AddIcon} addChannelOption title="Add Channel" />
+
         </SidebarContainer>
     )
 }
@@ -56,6 +64,12 @@ const SidebarContainer = styled.div`
     margin-top: 60px;
     max-width: 260px;
     border-top: 1px solid #49274b;
+
+    > hr {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #49274b;
+    }
 `
 
 const SidebarHeader = styled.div`
