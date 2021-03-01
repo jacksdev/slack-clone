@@ -1,10 +1,26 @@
 import React from 'react'
 import styled from 'styled-components';
+import {db} from '../firebase';
+
+
+
+const addChannel = () => {
+
+    const channelName = prompt('Please endter channel name');
+
+    if(channelName){
+        db.collection('rooms').add({
+            name: channelName,
+        }
+        )
+    }
+
+
+};
 
 
 
 
-const addChannel = () => {};
 const selectChannel = () => {};
 
 
