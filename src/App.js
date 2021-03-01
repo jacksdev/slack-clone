@@ -2,13 +2,13 @@ import React from 'react';
 import Header from './components/Header';
 import SideBar from './components/SideBar';
 import styled from 'styled-components';
-
 import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
+import Chat from './components/Chat'
 
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
             <SideBar />
             <Switch>
               <Route path="/" exact>
-                {/* //TODO Chat components */}
+                <Chat />
               </Route>
             </Switch>
           </AppBody>
