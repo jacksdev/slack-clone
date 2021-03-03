@@ -7,10 +7,11 @@ function Message({ message, timestamp, user, userImage }) {
     return (
         
         <MessageContainer>
-            <img border='0' source={userImage} alt='' />
+            <img source={userImage} alt='' />
             {message} - 
             {user} - 
-            {<Moment unix>{timestamp?.seconds}</Moment>}
+                {new Date(timestamp?.toDate()).toLocaleTimeString()}
+             
         </MessageContainer>
         
     )
@@ -20,6 +21,5 @@ export default Message;
 
 
 const MessageContainer = styled.div`
-    display: flex;
     flex: 0.8;
 `
