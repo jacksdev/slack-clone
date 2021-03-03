@@ -2,9 +2,11 @@ import React from 'react'
 import styled from 'styled-components';
 import StarBorderedOutlineIcon from '@material-ui/icons/StarBorderOutlined';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined'
+import ChatInput from './ChatInput';
+import Message from './Message';
 import { useSelector } from 'react-redux'
 import { selectRoomId } from '../features/appSlice';
-import ChatInput from './ChatInput';
+
 import { useCollection, useDocument } from 'react-firebase-hooks/firestore'
 import { db } from '../firebase';
 
@@ -40,6 +42,24 @@ function Chat() {
                 </Header>
 
                 <ChatMessages>
+                                
+                    {
+                    
+                    roomMessages?.docs.map(
+                            (doc) => {
+
+                                const { message, timestamp, user, userImage} = doc.data();
+
+                                return <Message 
+                                    key={doc.id}
+                                    message={message}
+                                    timestamp={timestamp}
+                                    user={user}
+                                    userImage={userImage}
+                                />
+                            }
+                        )
+                    }
                     
                 </ChatMessages>
 
