@@ -29,7 +29,7 @@ function Chat() {
             <>
                 <Header>
                     <HeaderLeft>
-                        <h4>#Room name</h4>
+                        <h4>#{roomDetails?.data().name}</h4>
                         <StarBorderedOutlineIcon />
                     </HeaderLeft>
                     <HeaderRight>
@@ -44,7 +44,8 @@ function Chat() {
                 </ChatMessages>
 
                 <ChatInput 
-                    channelId = {roomId}
+                   channelName = {roomDetails?.data().name}
+                   channelId = {roomId}
                 />
             </>
         </ChatContainer>
