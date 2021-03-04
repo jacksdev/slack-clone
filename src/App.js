@@ -20,10 +20,10 @@ function App() {
     <div className="app">
       
       <Router>
-        {!user ? (
+        {user ? (
           <SignIn />
         ) : (
-          <SignIn>
+          <>
             <Header />
             <AppBody>
               <SideBar />
@@ -33,7 +33,7 @@ function App() {
                 </Route>
               </Switch>
             </AppBody>
-          </SignIn>
+          </>
         )}
         
       </Router>
