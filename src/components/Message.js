@@ -8,14 +8,14 @@ function Message({ message, timestamp, user, userImage }) {
         
         <MessageContainer>
             <img src="https://avatars.githubusercontent.com/u/44128251?s=400&u=730d9ecf6ac372b37bef5786dd8e5e3554d92beb&v=4" alt='' />
-            {message}
-            <span>
+            <MessageInfo>
+                <h4>
+                    {user} <span>{new Date(timestamp?.toDate()).toLocaleDateString()} {new Date(timestamp?.toDate()).toLocaleTimeString()}</span>
+                </h4>
                 <p>
-                    {user} &nbsp;
-                    {new Date(timestamp?.toDate()).toLocaleDateString()} {new Date(timestamp?.toDate()).toLocaleTimeString()}
+                    {message}
                 </p> 
-            </span>
-             
+            </MessageInfo>
         </MessageContainer>
         
     )
@@ -25,17 +25,23 @@ export default Message;
 
 
 const MessageContainer = styled.div`
-    flex: 0.8;
-    margin: 20px;
-    font-size: 20px;
+    display:flex;
+    align-items: center;
+    padding: 20px;
 
     > img {
-        width: 60px;
-        margin-right: 20px;
+        height: 50px;
+        border-radius: 8px;
     }
+`
 
-    > span > p {
-        font-size: 15px;
-        color: lightgrey;
+const MessageInfo = styled.div`
+    padding-left: 10px;
+
+    > h4 > span {
+        color: grey;
+        font-weight: 300;
+        margin-left: 4px;
+        font-size: 10px;
     }
 `
