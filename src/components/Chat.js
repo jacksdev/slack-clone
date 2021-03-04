@@ -36,7 +36,8 @@ function Chat() {
 
     return (
         <ChatContainer>
-            <>
+            {roomId && roomMessages && (
+                <>
                 <Header>
                     <HeaderLeft>
                         <h4>#{roomDetails?.data().name}</h4>
@@ -79,6 +80,8 @@ function Chat() {
                     channelId = {roomId}
                 />
             </>
+            )}
+            
         </ChatContainer>
     )
 }
