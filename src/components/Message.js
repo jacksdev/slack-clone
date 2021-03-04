@@ -5,7 +5,6 @@ import Moment from 'react-moment';
 
 function Message({ message, timestamp, user, userImage }) {
     return (
-        
         <MessageContainer>
             <img src="https://avatars.githubusercontent.com/u/44128251?s=400&u=730d9ecf6ac372b37bef5786dd8e5e3554d92beb&v=4" alt='' />
             <MessageInfo>
