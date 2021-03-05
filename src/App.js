@@ -15,7 +15,7 @@ import SignIn from './components/SignIn';
 
 function App() {
 
-  const  [user, loading] = useAuthState(auth)
+  const  [user] = useAuthState(auth)
   return (
     <div className="app">
       

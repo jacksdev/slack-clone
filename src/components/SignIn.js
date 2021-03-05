@@ -14,7 +14,7 @@ function SignIn() {
     return (
         <SignInContainer>
             <SignInInnerContainer>
-                <img src="https://cdn.mos.cms.futurecdn.net/SDDw7CnuoUGax6x9mTo7dd.jpg" border="0" />
+                <img src="https://cdn.mos.cms.futurecdn.net/SDDw7CnuoUGax6x9mTo7dd.jpg" border="0" alt='Slack UI stydy' />
                 <h1>Slack UI study </h1>
                 <p>built with</p>
                 <p>REACT - REDUX - FIREBASE - STYLED COMPONENTS</p>
@@ -60,7 +60,8 @@ const SignInInnerContainer = styled.div`
         color: white;
         padding: 15px;
         font-size: 16px;
-        : hover {
+
+        :hover {
             color: black;
         }
     }

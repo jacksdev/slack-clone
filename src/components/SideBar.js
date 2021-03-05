@@ -23,7 +23,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 function SideBar() {      
 
     const [user] = useAuthState(auth);
-    const [channels, loading, error] = useCollection(db.collection('rooms'))
+    const [channels, loading] = useCollection(db.collection('rooms'))
 
 
     return (
